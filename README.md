@@ -34,77 +34,92 @@ Most of my work revolves around backend engineering, distributed systems, and ap
 <tr>
 <td width="50%" valign="top">
 
-### 🔧 Redis Clone
+### 🧠 SAGE
+**Self-Adaptive Graph-Enhanced Retrieval**
 
-**Built from scratch in Go**
+Research-oriented framework exploring self-correcting RAG pipelines with evaluator-driven retrieval.
 
-A custom in-memory key-value store implementing the Redis wire protocol over raw TCP sockets.
+- ✓ Evaluator LLMs for retrieval quality scoring
+- ✓ Graph-augmented multi-hop reasoning
+- ✓ Corrective retrieval loops
+- ✓ Confidence-based fallback search
+- ✓ ONNX-optimized evaluator inference
 
-- ✓ RESP protocol parser
-- ✓ Concurrent in-memory storage
-- ✓ TTL expiration
-- ✓ TCP networking
-- ✓ Snapshot persistence (RDB)
-- ✓ Append-only log (AOF)
+`Python` `LangGraph` `Knowledge Graphs` `ONNX` `PyTorch`
 
-`Go` `TCP` `RESP Protocol` `Concurrency`
+[Learn More →](https://github.com/Prabhav200511)
 
 </td>
 <td width="50%" valign="top">
 
-### 🎟️ QuickTicket
+### ⚡ MyCache
+**High-performance in-memory datastore built from scratch in Go**
 
-**Distributed ticket booking platform**
+Custom implementation of a Redis-compatible key-value store over raw TCP sockets.
 
-Designed to prevent overselling during high-traffic flash sales.
+- ✓ RESP protocol parser
+- ✓ Concurrent storage engine
+- ✓ TCP networking layer
+- ✓ TTL expiration
+- ✓ Persistence (AOF + RDB)
+- ✓ Memory-efficient design
 
-- ✓ Atomic reservations using Redis Lua scripts
-- ✓ Kafka-based asynchronous workflows
-- ✓ PostgreSQL-backed persistence
-- ✓ QR ticket generation
-- ✓ Idempotent order processing
+`Go` `TCP` `RESP Protocol` `Concurrency`
 
-`Distributed Systems` `Redis Lua` `Kafka` `PostgreSQL`
+[Learn More →](https://github.com/Prabhav200511)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🔍 Hybrid Retrieval Engine
+### 💬 PulseChat
+**Distributed real-time messaging platform**
 
-**RAG system with hybrid search**
+Scalable chat infrastructure built on WebSockets and Redis Pub/Sub with persistent message history.
 
-A Retrieval-Augmented Generation engine combining multiple retrieval strategies for domain-specific Q&A.
+- ✓ WebSocket connections & presence
+- ✓ Redis Pub/Sub for real-time delivery
+- ✓ Message persistence & read receipts
+- ✓ Media uploads
+- ✓ Horizontal scaling architecture
 
-- ✓ BM25 + dense vector search
-- ✓ Cross-encoder reranking
-- ✓ LangGraph orchestration
-- ✓ Qdrant vector store
-- ✓ Observability & tracing
+`TypeScript` `WebSockets` `Redis Pub/Sub` `PostgreSQL`
 
-`Python` `LangGraph` `Qdrant` `Hybrid Search`
+[Learn More →](https://github.com/Prabhav200511)
 
 </td>
 <td width="50%" valign="top">
 
-### 🧠 SAGE
+### 🎟️ QuickTicket
+**Event-driven reservation system**
 
-**Self-Adaptive Graph-Enhanced Retrieval**
+Distributed ticket booking platform designed to prevent overselling under high concurrency.
 
-Research-oriented project exploring self-correcting RAG pipelines.
+- ✓ Atomic reservations via Redis Lua scripts
+- ✓ Kafka-based async event workflows
+- ✓ Idempotent order processing
+- ✓ Reservation state machine
+- ✓ Payment pipeline integration
 
-- ✓ Evaluator LLMs for retrieval quality scoring
-- ✓ Graph-augmented reasoning
-- ✓ Corrective retrieval loops
-- ✓ Confidence-based fallback search
-- ✓ ONNX-optimized inference
+`Distributed Systems` `Redis Lua` `Kafka` `PostgreSQL`
 
-`Agentic AI` `Knowledge Graphs` `ONNX` `PyTorch`
+[Learn More →](https://github.com/Prabhav200511)
 
 </td>
 </tr>
 </table>
+
+<div align="center">
+
+| Project | Engineering Focus |
+|---|---|
+| 🧠 **SAGE** | GenAI · LLM Engineering · Agentic AI |
+| ⚡ **MyCache** | Systems Programming · Protocol Design |
+| 💬 **PulseChat** | Backend Engineering · Real-Time Systems |
+| 🎟️ **QuickTicket** | Distributed Systems · Event-Driven Architecture |
+
+</div>
 
 ---
 
@@ -156,8 +171,9 @@ PyTorch · LangChain · LangGraph · Qdrant · ONNX Runtime
 
 ## 🚀 Currently Working On
 
-- Building a Redis-compatible in-memory database in Go
-- Developing SAGE — a self-correcting RAG framework
+- Developing **SAGE** — a self-correcting RAG framework with graph-augmented retrieval
+- Building **MyCache** — a Redis-compatible in-memory database in Go
+- Building **PulseChat** — distributed real-time messaging with WebSockets & Redis Pub/Sub
 - Learning distributed consensus (Raft, Paxos)
 - Solving algorithmic problems on LeetCode
 
