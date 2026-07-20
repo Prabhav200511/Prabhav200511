@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1131" width="100%" height="100%" style="background: #0d1117; font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;">
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap");
+      .bg-rect { fill: #0d1117; stroke: #30363d; stroke-width: 1.5px; rx: 12px; }
+      .header-bar { fill: #161b22; }
+      .title-text { font-size: 13px; fill: #8b949e; font-weight: 600; text-anchor: middle; }
+      .boot-text { font-size: 13px; fill: #58a6ff; font-weight: 600; opacity: 0; }
+      .boot-success { fill: #3fb950; }
+      .name-text { font-size: 22px; fill: #f0f6fc; font-weight: 700; letter-spacing: 2px; opacity: 0; }
+      .role-text { font-size: 14px; fill: #a5d6ff; font-weight: 600; opacity: 0; }
+      .ascii-row { font-size: 11px; font-weight: 600; letter-spacing: 0px; white-space: pre; opacity: 0; }
+      .footer-tagline { font-size: 13.5px; fill: #e2e8f0; font-weight: 600; text-anchor: middle; opacity: 0; }
+      .footer-stack { font-size: 12.5px; fill: #7d8590; font-weight: 400; text-anchor: middle; opacity: 0; }
+      .cursor { fill: #58a6ff; font-weight: 700; animation: blink 1s infinite; }
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(3px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      
+      .boot-1 { animation: fadeIn 0.4s ease forwards 0.20s; }
+      .boot-2 { animation: fadeIn 0.4s ease forwards 0.80s; }
+      .boot-3 { animation: fadeIn 0.4s ease forwards 1.40s; }
+      .boot-4 { animation: fadeIn 0.4s ease forwards 2.00s; }
+      .name-anim { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards 2.60s; }
+      .role-anim { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards 2.80s; }
+      .footer-anim { animation: fadeIn 0.8s ease forwards 6.00s; }
+    </style>
+  </defs>
+  
+  <!-- Terminal Window Container -->
+  <rect class="bg-rect" x="4" y="4" width="812" height="1123" />
+  <path class="header-bar" d="M 5 16 A 11 11 0 0 1 16 5 L 804 5 A 11 11 0 0 1 815 16 L 815 36 L 5 36 Z" />
+  <line x1="5" y1="36" x2="815" y2="36" stroke="#30363d" stroke-width="1" />
+  
+  <!-- macOS Window Control Buttons -->
+  <circle cx="26" cy="20" r="6" fill="#ff5f56" />
+  <circle cx="46" cy="20" r="6" fill="#ffbd2e" />
+  <circle cx="66" cy="20" r="6" fill="#27c93f" />
+  <text class="title-text" x="410.0" y="24">krishna-prabhav@systems-node ~ profile --render</text>
+  
+  <!-- Boot Sequence -->
+  <g transform="translate(40, 62)">
+    <text class="boot-text boot-1" y="0">&gt; Initializing profile environment...</text>
+    <text class="boot-text boot-2" y="19">&gt; Loading engineer specifications: <tspan fill="#f0f6fc">SWE + AI Systems Engineer</tspan>...</text>
+    <text class="boot-text boot-3" y="38">&gt; Loading distributed systems modules &amp; neural weights...</text>
+    <text class="boot-text boot-4" y="57">&gt; Rendering ASCII self-portrait... <tspan class="boot-success">[OK]</tspan></text>
+  </g>
+  
+  <!-- Name & Title Banner -->
+  <g transform="translate(40, 145)">
+    <text class="name-text name-anim" y="0">KRISHNA PRABHAV</text>
+    <text class="role-text role-anim" x="215" y="-2">// SWE &amp; AI Systems Engineer</text>
+  </g>
+  
+  <!-- Animated ASCII Portrait Container -->
+  <g transform="translate(40, 170)">
+    <text class="ascii-row" x="0" y="13" style="animation: fadeIn 0.35s ease forwards 3.200s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="26" style="animation: fadeIn 0.35s ease forwards 3.236s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="39" style="animation: fadeIn 0.35s ease forwards 3.272s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="52" style="animation: fadeIn 0.35s ease forwards 3.307s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="65" style="animation: fadeIn 0.35s ease forwards 3.343s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="78" style="animation: fadeIn 0.35s ease forwards 3.379s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="91" style="animation: fadeIn 0.35s ease forwards 3.415s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="104" style="animation: fadeIn 0.35s ease forwards 3.451s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="117" style="animation: fadeIn 0.35s ease forwards 3.487s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$B8#bbooaah&amp;$$@@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="130" style="animation: fadeIn 0.35s ease forwards 3.522s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@MohdmwZ0Q0mmqpwZwmQQJUuqB$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="143" style="animation: fadeIn 0.35s ease forwards 3.558s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$MdZwqqqdbdbhookbkahaa*okdOXz0d@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="156" style="animation: fadeIn 0.35s ease forwards 3.594s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$aOQmdbpdkbdpbdpddpkkaaaa*MW&amp;WaLv)Q$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="169" style="animation: fadeIn 0.35s ease forwards 3.630s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$$$Mmqkhoabdkhhkbhkbbhhao*a**oa#MM#hm|&lt;f@$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="182" style="animation: fadeIn 0.35s ease forwards 3.666s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$$$$k0pqh#W*aaahkbkhhho*ooabahho##oMMMaoU?U$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="195" style="animation: fadeIn 0.35s ease forwards 3.701s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$bYmwaWohbkhhbbkkbbkhoooah*###*#MMWMM*dYit8$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="208" style="animation: fadeIn 0.35s ease forwards 3.737s; fill: #e2e8f0;">$$$$$$$$$$$$$$$$$$$$$$$bQOp#M#akhkbkbbkbdkkkkkhakha#W&amp;#o*#&amp;WWMam([d$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="221" style="animation: fadeIn 0.35s ease forwards 3.773s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$pLbdoooooaoa*#abdpboakkhhoo#MMWMMM**MWMM#*#0|w$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="234" style="animation: fadeIn 0.35s ease forwards 3.809s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$k/Qpa*oo*#MMW###okkbdhakdbaaoaa#M*MMWWW&amp;W*okpCjo$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="247" style="animation: fadeIn 0.35s ease forwards 3.845s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$8YzzdaMMMWWWWMM*kpwppqwbaakhooo*#&amp;M*oM8&amp;&amp;WM#*MhZUB$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="260" style="animation: fadeIn 0.35s ease forwards 3.881s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$LfQoa#WW&amp;W#okqCr}&lt;I!&gt;&lt;_1(tuzYXXQdkoo*##MMWah*#ao0w$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="273" style="animation: fadeIn 0.35s ease forwards 3.916s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$BjLq*W&amp;8&amp;MobmU/-i:`'.&#160;&#160;&#160;&#160;&#160;&#160;`I+1juXXurt/xYp#oaa#abwY@$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="286" style="animation: fadeIn 0.35s ease forwards 3.952s; fill: #f8fafc;">$$$$$$$$$$$$$$$$$$$bcpaW#&amp;%&amp;#oZf]iI;:&quot;^'......&#160;.^,,:Ili&gt;~+_}/Q#*#W&amp;obY%$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="299" style="animation: fadeIn 0.35s ease forwards 3.988s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$ZxZM#o88W8d|_+iI;,^''.&#160;.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.`:I&gt;&lt;&gt;~-}C&amp;WW8&amp;*JB$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="312" style="animation: fadeIn 0.35s ease forwards 4.024s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$XO###W8&amp;8p(__&lt;i!;&quot;.&#160;&#160;.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'&quot;l&gt;-(fuu/[?1m%M&amp;W*O@$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="325" style="animation: fadeIn 0.35s ease forwards 4.060s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$wxqka*&amp;%ot]-[/cvunj\(}&gt;,.&#160;&#160;&#160;&#160;'I~{xxur\(/rzj}fo8#&amp;*O@$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="338" style="animation: fadeIn 0.35s ease forwards 4.096s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$htqkaMBJ[-)zj(()(tjx/?&gt;:'.'.;+?(x/[~_-~&gt;?({}Q&amp;M8Ob$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="351" style="animation: fadeIn 0.35s ease forwards 4.131s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$Qq&amp;##&amp;n--(1-}(/|})(t/}_:...l]\j}/LLx(ct[-?-c*MMdb$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="364" style="animation: fadeIn 0.35s ease forwards 4.167s; fill: #334155;">$$$$$$$$$$$$$$$$$$$$$ObM#W#r-?_?(zU]jaw)l{t(~^&#160;`~(|~&quot;?mZ}!jx{__+jooWOtW$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="377" style="animation: fadeIn 0.35s ease forwards 4.203s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$Cqo#*au-_~~]|)-_tf-&gt;&lt;{1i'&#160;.,?}+__--_?+&gt;li+~)kod}`c$@$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="390" style="animation: fadeIn 0.35s ease forwards 4.239s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$@$zrcmo*z~+~&gt;IIliil!i!!~&lt;^&#160;&#160;&#160;'I~!IIII:&quot;^&quot;&quot;;&lt;~1kz-iIL$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="403" style="animation: fadeIn 0.35s ease forwards 4.275s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$O&quot;&gt;&lt;n0J;~&lt;I&quot;''``^^'.'i&gt;&quot;.&#160;&#160;`!~I&#160;..''...',!&gt;/(:}i}$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="416" style="animation: fadeIn 0.35s ease forwards 4.310s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$j,~Iicil&gt;;`.&#160;&#160;&#160;&#160;&#160;&#160;&#160;,l,'...&#160;&quot;&quot;!,&#160;&#160;&#160;&#160;&#160;&#160;&#160;'&quot;I+{~-}lZ$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="429" style="animation: fadeIn 0.35s ease forwards 4.346s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$B-&gt;?&gt;]-:&gt;,'&#160;&#160;&#160;&#160;...II':&quot;&#160;&#160;&#160;^;`^~,..&#160;&#160;&#160;.`;i}))[&lt;{B$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="442" style="animation: fadeIn 0.35s ease forwards 4.382s; fill: #475569;">$$$$$$$$$$$$$$$$$$$$$$$h~_{)},&gt;!,''.&#160;&#160;&#160;&#160;&quot;I-}&lt;!Ii&lt;][&gt;I`&#160;&#160;.'`,;&lt;-{_-i&gt;o$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="455" style="animation: fadeIn 0.35s ease forwards 4.418s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$d&lt;~&lt;?&gt;I_i!I,^&#160;&#160;'^,;;,;;II:I;^^'.&quot;li&gt;+[--cfxo$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="468" style="animation: fadeIn 0.35s ease forwards 4.454s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$$$$ovnU-`??+&gt;&gt;~??+&lt;il!I:^,I;;;l&lt;[1]&lt;&lt;_]}&gt;x$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="481" style="animation: fadeIn 0.35s ease forwards 4.490s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$m&#160;i]-&lt;I?/(\t\((|}][}{))|/({?i&gt;?]]!k$@@$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="494" style="animation: fadeIn 0.35s ease forwards 4.525s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$@${.-]-&gt;Ili~})+,^'```&quot;&gt;{)?il!~??}&gt;t$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="507" style="animation: fadeIn 0.35s ease forwards 4.561s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$k'&quot;?}?&lt;;:l&gt;?)?&gt;&gt;&gt;ii-)1-&gt;!!&lt;-]}_-8$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="520" style="animation: fadeIn 0.35s ease forwards 4.597s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$+:,+{[~l;;,l+[[[}{[&lt;llll&lt;-[{?lm$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="533" style="animation: fadeIn 0.35s ease forwards 4.633s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$)+}&lt;?1{-l;^&#160;'.&#160;&#160;&#160;`''^;l~}|([]]8$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="546" style="animation: fadeIn 0.35s ease forwards 4.669s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@$f~11)/f/[&gt;l;,;!&lt;I;:;li]/nf)1[)$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="559" style="animation: fadeIn 0.35s ease forwards 4.704s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$@$X&gt;[-?1/rxxt()txcuf/\fnnr|}[}-n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="572" style="animation: fadeIn 0.35s ease forwards 4.740s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$B(~-&lt;&lt;~_?}(tjcUL0QJXuj\{[]?-]-nB@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="585" style="animation: fadeIn 0.35s ease forwards 4.776s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$$$$$&amp;bZQz],?_&gt;l;li+_~&gt;~++&lt;~????[?+&lt;~_?{_uQUO*$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="598" style="animation: fadeIn 0.35s ease forwards 4.812s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$$$$Bo0u\rz/]-][+&gt;i;,,I&gt;&lt;&gt;&gt;!!i&lt;_--?_il!&lt;+-1))LYxruQd*%$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="611" style="animation: fadeIn 0.35s ease forwards 4.848s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$8h0zjt/ffz)_[[]]+i;:&quot;,,;;I:;;Ili&gt;&gt;l;;;l&gt;~?)1}nUzcj///juLd#B$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="624" style="animation: fadeIn 0.35s ease forwards 4.884s; fill: #cbd5e1;">$$$$$$$$$$$$@#pUnt(\fxxuuxv|i&gt;~+-~i;&quot;``&quot;:;;,^^^&quot;;l;,&quot;^,I!+]1[}uvXXxxf//|1{)fv0h%$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="637" style="animation: fadeIn 0.35s ease forwards 4.919s; fill: #94a3b8;">$$$$$$$$8aOcj|)(\trurxjvzuuv[,I&gt;&gt;&gt;l;&quot;`''&quot;&quot;:;::;I;:&quot;^'`,I!&lt;--?tvuvzxnnxj/jt|/1{])rYwM$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="650" style="animation: fadeIn 0.35s ease forwards 4.955s; fill: #cbd5e1;">$$$$&amp;wYnt1|(/ffruxxvnxuunvunc);^;!I;:`.'`&quot;&quot;&quot;,::,^`'''&quot;;II!&lt;]juzzufxnnxrjjrtffff/)}[}(nL*$$$$</text>
+    <text class="ascii-row" x="0" y="663" style="animation: fadeIn 0.35s ease forwards 4.991s; fill: #94a3b8;">$$$&amp;j{)\tfrftjjnxUvxxxxnnvvvurt?;^&quot;^,&quot;'.'`^&quot;&quot;^&quot;^`''.`^&quot;,l?txuczxxrrzxxunrtfrrrftrfj/({-?b$$$</text>
+    <text class="ascii-row" x="0" y="676" style="animation: fadeIn 0.35s ease forwards 5.027s; fill: #cbd5e1;">$$$h/fxjxxxnrxnuvcrrxnnxunnzznxvx(+l,^.&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&quot;!_{jzzzYnjjjxrncxnrxffrrtjjj/xfxfjtO$$$</text>
+    <text class="ascii-row" x="0" y="689" style="animation: fadeIn 0.35s ease forwards 5.063s; fill: #94a3b8;">$$$pfrxjjxnxxvvzcjxvxuuxnxnnunnvvccvx/{-&lt;iII;:li&lt;]}\xuccXccuxfjfnxxrvvxnjxrjrjjnfjjtxj//Z$$$</text>
+    <text class="ascii-row" x="0" y="702" style="animation: fadeIn 0.35s ease forwards 5.099s; fill: #cbd5e1;">$$$qtxxxrrxruunYfrzcrjxnxxrxuxjxxnzzccYXXzuYXzXcYCUUYzuunfxrxrtjxjffrunjfjnxfjxjjxjjfnr/O$$$</text>
+    <text class="ascii-row" x="0" y="715" style="animation: fadeIn 0.35s ease forwards 5.134s; fill: #94a3b8;">$$$qjxnnujnzzuYuxuxxxxrfjjxxxxxrnxxvrxrcnnczvXzcvnuxrfjjrf/jxxrjrjrrffujxjfurfxffjjrjxrfZ$$$</text>
+    <text class="ascii-row" x="0" y="728" style="animation: fadeIn 0.35s ease forwards 5.170s; fill: #cbd5e1;">$$$wjnrnxtvcjzurXvjrnxnnrjrrjnrjxxxjjjxrnxxurnxxxjxjfftfrtfjtrjfrxrrxjxxfxnxvrxj/fffjjftZ$$$</text>
+    <text class="ascii-row" x="0" y="741" style="animation: fadeIn 0.35s ease forwards 5.206s; fill: #94a3b8;">$$$wrjtjjnnxzcjzvxnjxxjxjxrxrxjxxfjrrrxxjrjxxjjtjrrjfjfjfjffffjjjxxffjfrjjrnuu/jxttfjfjtO$$$</text>
+    <text class="ascii-row" x="0" y="754" style="animation: fadeIn 0.35s ease forwards 5.242s; fill: #64748b;">$$$Z/xjrrzjcXuvvjxrtjxxxjjrxjnnnjfxjrrfjxxjrxuu/rjfjrtfftrjff/jjfrrft/ftunfrjXnrxfjffjf/Q$$$</text>
+    <text class="ascii-row" x="0" y="767" style="animation: fadeIn 0.35s ease forwards 5.278s; fill: #64748b;">$$$Zfxnfvxvzjuzxrxjjxjrjfjfrxrjxjjrrurftxrxnfvutnfjjjtjtfftfttfxtfjfrjf//nj/jnUxfnjjrfftO$$$</text>
+    <text class="ascii-row" x="0" y="780" style="animation: fadeIn 0.35s ease forwards 5.313s; fill: #64748b;">$$$ZtjfnXnzjnUvnrrjrfxxrjjnrjxnxxurxurfjtjr/ruu(tfjrjttfjftttfftfffttjfttfntjfxXtxjtjxfnw$$$</text>
+    <text class="ascii-row" x="0" y="793" style="animation: fadeIn 0.35s ease forwards 5.349s; fill: #64748b;">$$$ZfjjXczfjXcnfrxnrjnjxfffftt|tt]]-ii-?|~-}-jr|jj(1(frfxftfxrjtjjjjffj/fffrxffUnft/rt/Yw$$$</text>
+    <text class="ascii-row" x="0" y="806" style="animation: fadeIn 0.35s ease forwards 5.385s; fill: #64748b;">$$$OjfccYuxnYjjj|{(1?_!lI;;,&quot;'';:'Ii'i/&lt;|]?1)zujffr)[&lt;!~?}{{)}]})/fjnxjjxrjfxjjuYjnxrtxOw$$$</text>
+    <text class="ascii-row" x="0" y="819" style="animation: fadeIn 0.35s ease forwards 5.421s; fill: #64748b;">$$$ZxvvUnnuYujf\:&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;'&quot;&quot;`^&quot;_x]1fj/rxtjnjjrf)]^.^....,i]1])1?]1/nfjxxrJxzzrtzUZ$$$</text>
+    <text class="ascii-row" x="0" y="832" style="animation: fadeIn 0.35s ease forwards 5.457s; fill: #64748b;">$$$mrnnYxJucnx/^'''''.`&gt;]-|/&lt;++!:`&#160;&#160;&#160;&#160;'n&quot;]j}.t1((/t\\/tf|&gt;'&#160;&#160;&#160;&#160;'`&#160;!&lt;`&#160;.','_(/\t/vnuXjjztL$$$</text>
+    <text class="ascii-row" x="0" y="845" style="animation: fadeIn 0.35s ease forwards 5.493s; fill: #64748b;">$$$oJYYzvzxjj\(]+ii&gt;~+[(ff/xrfczuftt/fjvjrunrcvvvvvczvvzYJvrxxnnuunczvzYYXULQQOOmmmm0Zw0o$$$</text>
+    <text class="ascii-row" x="0" y="858" style="animation: fadeIn 0.35s ease forwards 5.528s; fill: #64748b;">$$$$$$%M*kbdqwZZLYzzYUC0qko#M&amp;&amp;8B@BB@$$$$@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="871" style="animation: fadeIn 0.35s ease forwards 5.564s; fill: #64748b;">$$$$$$@WhqmZ0QLLLLCUzccYLZdkaaooooaao#MM###MMWWW&amp;&amp;8888&amp;W&amp;88B@@$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$</text>
+    <text class="ascii-row cursor" x="621" y="871" style="animation: fadeIn 0.1s forwards 6.00s, blink 1s infinite 6.00s;">█</text>
+  </g>
+  <line x1="30" y1="1063" x2="790" y2="1063" stroke="#21262d" stroke-width="1" />
+  <g class="footer-anim" transform="translate(410.0, 1081)">
+    <text class="footer-tagline" y="8">Building scalable software • Distributed Systems • AI</text>
+    <text class="footer-stack" y="32">Go • Python • TypeScript • Redis • PostgreSQL • PyTorch • ONNX</text>
+  </g>
+</svg>
