@@ -94,38 +94,6 @@ I am an **AI Systems & Software Engineer** obsessed with low-latency backends, d
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Prabhav200511&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=cbd5e1" height="165" alt="Top Languages" />
 </div>
 
----
-
-## 🎨 How to Update the Animated ASCII Self-Portrait
-
-This profile features an **animated self-typing ASCII portrait** (`assets/ascii.svg`) generated from a real photograph using pure Python, math, and SVG/CSS keyframe animations (zero JavaScript required!).
-
-### **1. Prerequisites**
-Install the required image processing libraries:
-```bash
-pip install pillow numpy rembg opencv-python-headless
-```
-
-### **2. Prepare Your Photo**
-For the cleanest, most dramatic portrait:
-- Use **side lighting** against a **plain background** with clear contrast.
-- Ensure shoulders are visible and keep a professional, neutral expression.
-- Place your photo inside the `assets/` folder (e.g., `assets/photo.jpg`).
-
-### **3. Generate & Embed**
-Run our custom generator script:
-```bash
-# Basic conversion
-python scripts/make_ascii_svg.py assets/photo.jpg assets/ascii.svg
-
-# Advanced options (AI background removal, custom columns, customized contrast)
-python scripts/make_ascii_svg.py assets/photo.jpg assets/ascii.svg --cols 90 --remove-bg --contrast 1.4 --name "KRISHNA PRABHAV" --title "SWE & AI Systems Engineer"
-```
-
-Commit and push your changes to GitHub — the portrait will automatically boot up and "type itself" whenever someone visits your profile!
-
----
-
 <div align="center">
   <p><b>✨ Let's connect and build scalable systems together!</b></p>
   <a href="https://github.com/Prabhav200511">GitHub</a> • <a href="https://linkedin.com">LinkedIn</a> • <a href="mailto:contact@example.com">Email</a>

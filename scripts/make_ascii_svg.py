@@ -73,15 +73,24 @@ def remove_background_if_requested(img: Image.Image, use_rembg: bool = False) ->
     if use_rembg and rembg_remove is not None:
         print("-> Applying AI background removal (rembg)...")
         res = rembg_remove(img)
-        # Convert back to PIL Image if rembg returns bytes or PIL
-        return res if isinstance(res, Image.Image) else img
+        if isinstance(res, Image.Image):
+            bbox = res.getbbox()
+            if bbox:
+                res = res.crop(bbox)
+            return res
     return img
 
 
-def preprocess_image(img: Image.Image, cols: int = 90, char_aspect: float = 0.55, enhance_contrast: float = 1.3) -> Image.Image:
+def preprocess_image(img: Image.Image, cols: int = 82, char_aspect: float = 0.55, enhance_contrast: float = 1.3, max_rows: int = 42) -> Image.Image:
     """Resizes and enhances the image for optimal ASCII representation."""
-    # Convert to grayscale
-    img = img.convert("L")
+    # If image has transparency, composite onto black background first
+    if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+        rgba = img.convert("RGBA")
+        bg = Image.new("RGBA", rgba.size, (0, 0, 0, 255))
+        bg.alpha_composite(rgba)
+        img = bg.convert("L")
+    else:
+        img = img.convert("L")
     
     # Auto-contrast and enhancement
     img = ImageOps.autocontrast(img, cutoff=1)
@@ -95,7 +104,13 @@ def preprocess_image(img: Image.Image, cols: int = 90, char_aspect: float = 0.55
     # Calculate dimensions taking into account font aspect ratio (characters are taller than wide)
     orig_width, orig_height = img.size
     rows = int((orig_height / orig_width) * cols * char_aspect)
-    rows = max(15, min(rows, 120))  # Keep rows sensible for SVG rendering
+    
+    # Cap rows at max_rows to prevent tall photos from making the SVG excessively tall
+    if rows > max_rows:
+        cols = max(30, int(max_rows / ((orig_height / orig_width) * char_aspect)))
+        rows = max_rows
+        
+    rows = max(15, min(rows, max_rows))
     
     img = img.resize((cols, rows), Image.Resampling.LANCZOS)
     return img
@@ -324,7 +339,8 @@ def main():
     parser.add_argument("input", nargs="?", default="", help="Path to input photo (e.g. assets/photo.jpg)")
     parser.add_argument("output", nargs="?", default="assets/ascii.svg", help="Path to output SVG (default: assets/ascii.svg)")
     parser.add_argument("--demo", action="store_true", help="Generate demo avatar silhouette without an input photo")
-    parser.add_argument("--cols", type=int, default=88, help="Number of character columns (default: 88)")
+    parser.add_argument("--cols", type=int, default=82, help="Number of character columns (default: 82)")
+    parser.add_argument("--max-rows", type=int, default=42, help="Maximum portrait rows/height (default: 42)")
     parser.add_argument("--charset", choices=list(ASCII_CHARSETS.keys()), default="detailed", help="Character density set to use")
     parser.add_argument("--remove-bg", action="store_true", help="Use rembg AI background removal before processing")
     parser.add_argument("--name", default="KRISHNA PRABHAV", help="Name to display on header")
@@ -345,13 +361,13 @@ def main():
             print(f"Notice: Input file '{args.input}' not found. Generating high-tech demo avatar silhouette...")
         else:
             print("Notice: Generating high-tech demo avatar silhouette (use `python make_ascii_svg.py assets/photo.jpg assets/ascii.svg` when ready with your photo)...")
-        ascii_grid = generate_demo_avatar(cols=args.cols, rows=int(args.cols * 0.48))
+        ascii_grid = generate_demo_avatar(cols=args.cols, rows=min(args.max_rows, int(args.cols * 0.48)))
     else:
         print(f"-> Loading image: {args.input}")
         img = Image.open(args.input)
         img = remove_background_if_requested(img, use_rembg=args.remove_bg)
         print("-> Preprocessing image and mapping to high-density ASCII grid...")
-        img = preprocess_image(img, cols=args.cols, enhance_contrast=args.contrast)
+        img = preprocess_image(img, cols=args.cols, enhance_contrast=args.contrast, max_rows=args.max_rows)
         ascii_grid = image_to_ascii_grid(img, charset_name=args.charset, invert=args.invert)
         
     print(f"-> Generating SVG animation ({len(ascii_grid)} lines x ~{len(ascii_grid[0])} chars)...")
