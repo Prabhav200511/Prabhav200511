@@ -35,17 +35,17 @@ Most of my work revolves around backend engineering, distributed systems, and ap
 <td width="50%" valign="top">
 
 ### 🧠 SAGE
-**Self-Adaptive Graph-Enhanced Retrieval**
+**Self-Adaptive Generative Engine**
 
-Research-oriented framework exploring self-correcting RAG pipelines with evaluator-driven retrieval.
+Production-grade RAG system with document ingestion, recursive chunking, and self-evaluation architecture.
 
-- ✓ Evaluator LLMs for retrieval quality scoring
-- ✓ Graph-augmented multi-hop reasoning
-- ✓ Corrective retrieval loops
-- ✓ Confidence-based fallback search
-- ✓ ONNX-optimized evaluator inference
+- ✓ End-to-end PDF document ingestion & text extraction pipeline
+- ✓ Recursive text chunking optimized for context retention
+- ✓ Modular backend service built with FastAPI & Python
+- ✓ Vector storage design for Qdrant & BGE embeddings
+- ✓ Architectural pipeline for self-reflective retrieval loops
 
-`Python` `LangGraph` `Knowledge Graphs` `ONNX` `PyTorch`
+`Python` `FastAPI` `LangGraph` `LangChain` `Qdrant` `Docker`
 
 [Learn More →](https://github.com/Prabhav200511)
 
@@ -57,14 +57,13 @@ Research-oriented framework exploring self-correcting RAG pipelines with evaluat
 
 Custom implementation of a Redis-compatible key-value store over raw TCP sockets.
 
-- ✓ RESP protocol parser
-- ✓ Concurrent storage engine
-- ✓ TCP networking layer
-- ✓ TTL expiration
-- ✓ Persistence (AOF + RDB)
-- ✓ Memory-efficient design
+- ✓ Custom RESP (Redis Serialization Protocol) parser
+- ✓ Concurrent storage engine with mutex thread safety
+- ✓ Custom TCP networking layer built over raw sockets
+- ✓ Append-Only File (AOF) durability & persistence engine
+- ✓ Memory-efficient key-value storage design
 
-`Go` `TCP` `RESP Protocol` `Concurrency`
+`Go` `TCP` `RESP Protocol` `Concurrency` `AOF Persistence`
 
 [Learn More →](https://github.com/Prabhav200511)
 
@@ -73,18 +72,18 @@ Custom implementation of a Redis-compatible key-value store over raw TCP sockets
 <tr>
 <td width="50%" valign="top">
 
-### 💬 PulseChat
-**Distributed real-time messaging platform**
+### 💬 Chatty
+**Real-time full-stack messaging platform**
 
-Scalable chat infrastructure built on WebSockets and Redis Pub/Sub with persistent message history.
+Responsive, low-latency chat application powered by WebSockets with persistent conversation history.
 
-- ✓ WebSocket connections & presence
-- ✓ Redis Pub/Sub for real-time delivery
-- ✓ Message persistence & read receipts
-- ✓ Media uploads
-- ✓ Horizontal scaling architecture
+- ✓ Bidirectional real-time communication via Socket.IO
+- ✓ Secure user authentication & authorization using JWT
+- ✓ Persistent chat history & message storage in MongoDB
+- ✓ Modular REST API layer built with Node.js & Express
+- ✓ Responsive single-page interface built with React.js
 
-`TypeScript` `WebSockets` `Redis Pub/Sub` `PostgreSQL`
+`React.js` `Node.js` `Express` `Socket.IO` `MongoDB` `JWT`
 
 [Learn More →](https://github.com/Prabhav200511)
 
@@ -92,17 +91,17 @@ Scalable chat infrastructure built on WebSockets and Redis Pub/Sub with persiste
 <td width="50%" valign="top">
 
 ### 🎟️ QuickTicket
-**Event-driven reservation system**
+**Full-stack event reservation & QR validation platform**
 
-Distributed ticket booking platform designed to prevent overselling under high concurrency.
+Secure ticketing architecture with role-based access, capacity tracking, and one-time QR validation.
 
-- ✓ Atomic reservations via Redis Lua scripts
-- ✓ Kafka-based async event workflows
-- ✓ Idempotent order processing
-- ✓ Reservation state machine
-- ✓ Payment pipeline integration
+- ✓ Cryptographically unique QR-coded ticket generation
+- ✓ One-time ticket validation & scanning to prevent overselling
+- ✓ Secure role-based access (`Host` vs `Customer`) with HTTP-only JWT
+- ✓ OTP-based email verification & password recovery workflow
+- ✓ Relational data modeling & capacity tracking with PostgreSQL (AWS RDS)
 
-`Distributed Systems` `Redis Lua` `Kafka` `PostgreSQL`
+`React` `Node.js` `Express` `PostgreSQL` `AWS RDS` `JWT`
 
 [Learn More →](https://github.com/Prabhav200511)
 
@@ -114,10 +113,10 @@ Distributed ticket booking platform designed to prevent overselling under high c
 
 | Project | Engineering Focus |
 |---|---|
-| 🧠 **SAGE** | GenAI · LLM Engineering · Agentic AI |
-| ⚡ **MyCache** | Systems Programming · Protocol Design |
-| 💬 **PulseChat** | Backend Engineering · Real-Time Systems |
-| 🎟️ **QuickTicket** | Distributed Systems · Event-Driven Architecture |
+| 🧠 **SAGE** | GenAI · LLM Engineering · RAG Architecture |
+| ⚡ **MyCache** | Systems Programming · Protocol Design · Concurrency |
+| 💬 **Chatty** | Full-Stack Engineering · Real-Time WebSockets |
+| 🎟️ **QuickTicket** | Backend Architecture · Role-Based Access · Security |
 
 </div>
 
@@ -171,11 +170,11 @@ PyTorch · LangChain · LangGraph · Qdrant · ONNX Runtime
 
 ## 🚀 Currently Working On
 
-- Developing **SAGE** — a self-correcting RAG framework with graph-augmented retrieval
-- Building **MyCache** — a Redis-compatible in-memory database in Go
-- Building **PulseChat** — distributed real-time messaging with WebSockets & Redis Pub/Sub
-- Learning distributed consensus (Raft, Paxos)
-- Solving algorithmic problems on LeetCode
+- Developing **SAGE** — self-correcting RAG framework with recursive chunking & Qdrant integration
+- Building **MyCache** — Redis-compatible in-memory datastore built from scratch in Go
+- Enhancing **Chatty** — real-time messaging platform with Socket.IO & MongoDB persistence
+- Expanding **QuickTicket** — full-stack event reservation & secure QR validation platform
+- Studying distributed systems & solving algorithmic problems on LeetCode
 
 ---
 
