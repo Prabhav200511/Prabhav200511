@@ -48,12 +48,12 @@ except ImportError:
     cv2 = None
 
 
-# Extended and compact ASCII character sets (ordered from dark/dense to light/empty)
+# Extended and compact ASCII character sets (ordered from dark/empty to light/dense)
 ASCII_CHARSETS = {
-    "standard": "@%#*+=-:. ",
-    "detailed": "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ",
-    "blocks": "█▓▒░ ",
-    "matrix": "01#*+=:. ",
+    "standard": " .:-=+*#%@",
+    "detailed": " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#WM&8%B@$",
+    "blocks": " ░▒▓█",
+    "matrix": " .:=+*#10",
 }
 
 # Monochrome gray palette matching GitHub Dark Mode (#0d1117 / #161b22)
@@ -171,15 +171,18 @@ def image_to_ascii_grid(img: Image.Image, charset_name: str = "detailed", invert
         line_str = []
         for x in range(width):
             pixel_val = pixels[x, y]
-            # Map pixel 0-255 to character set
-            char_idx = int((pixel_val / 255.0) * (len(chars) - 1))
-            char = chars[char_idx]
-            # Escape XML/SVG special characters
-            if char == "&": char = "&amp;"
-            elif char == "<": char = "&lt;"
-            elif char == ">": char = "&gt;"
-            elif char == '"': char = "&quot;"
-            elif char == " ": char = "&#160;"  # Non-breaking space for alignment
+            # Force background / dark pixels to non-breaking space
+            if pixel_val < 15:
+                char = "&#160;"
+            else:
+                char_idx = int(((pixel_val - 15) / 240.0) * (len(chars) - 1))
+                char = chars[max(0, min(len(chars) - 1, char_idx))]
+                # Escape XML/SVG special characters
+                if char == "&": char = "&amp;"
+                elif char == "<": char = "&lt;"
+                elif char == ">": char = "&gt;"
+                elif char == '"': char = "&quot;"
+                elif char == " ": char = "&#160;"  # Non-breaking space for alignment
             line_str.append(char)
         ascii_grid.append("".join(line_str))
     return ascii_grid
@@ -213,9 +216,9 @@ def generate_animated_svg(
     char_width = font_size * 0.602
     content_width = max(820, int(max_line_len * char_width) + padding * 2 + 40)
     
-    header_height = 150  # Window bar + Boot sequence + Name/Title
+    header_height = 180  # Window bar + Boot sequence + Name/Title
     portrait_height = num_rows * line_height
-    footer_height = 70   # Tagline + Stack + padding
+    footer_height = 75   # Tagline + Stack + padding
     total_height = header_height + portrait_height + footer_height
     
     # Animation timings
@@ -278,17 +281,17 @@ def generate_animated_svg(
         f'  <text class="title-text" x="{content_width / 2}" y="24">krishna-prabhav@systems-node ~ profile --render</text>',
         f'  ',
         f'  <!-- Boot Sequence -->',
-        f'  <g transform="translate({padding + 10}, 62)">',
+        f'  <g transform="translate({padding + 10}, 60)">',
         f'    <text class="boot-text boot-1" y="0">&gt; Initializing profile environment...</text>',
-        f'    <text class="boot-text boot-2" y="19">&gt; Loading engineer specifications: <tspan fill="#f0f6fc">SWE + AI Systems Engineer</tspan>...</text>',
-        f'    <text class="boot-text boot-3" y="38">&gt; Loading distributed systems modules &amp; neural weights...</text>',
-        f'    <text class="boot-text boot-4" y="57">&gt; Rendering ASCII self-portrait... <tspan class="boot-success">[OK]</tspan></text>',
+        f'    <text class="boot-text boot-2" y="18">&gt; Loading engineer specifications: <tspan fill="#f0f6fc">SWE + AI Systems Engineer</tspan>...</text>',
+        f'    <text class="boot-text boot-3" y="36">&gt; Loading distributed systems modules &amp; neural weights...</text>',
+        f'    <text class="boot-text boot-4" y="54">&gt; Rendering ASCII self-portrait... <tspan class="boot-success">[OK]</tspan></text>',
         f'  </g>',
         f'  ',
         f'  <!-- Name & Title Banner -->',
-        f'  <g transform="translate({padding + 10}, 130)">',
+        f'  <g transform="translate({padding + 10}, 155)">',
         f'    <text class="name-text name-anim" y="0">{escape_xml(name)}</text>',
-        f'    <text class="role-text role-anim" x="{len(name) * 13 + 20}" y="-2">// {escape_xml(title)}</text>',
+        f'    <text class="role-text role-anim" x="{int(len(name) * 13.5) + 20}" y="-2">// {escape_xml(title)}</text>',
         f'  </g>',
         f'  ',
         f'  <!-- Animated ASCII Portrait Container -->',
@@ -317,12 +320,12 @@ def generate_animated_svg(
     svg_parts.append('  </g>')
     
     # Footer Section (Tagline & Tech Stack)
-    footer_y = header_height + portrait_height + 30
+    footer_y = header_height + portrait_height + 35
     svg_parts.extend([
-        f'  <line x1="{padding}" y1="{footer_y - 15}" x2="{content_width - padding}" y2="{footer_y - 15}" stroke="#21262d" stroke-width="1" />',
+        f'  <line x1="{padding}" y1="{footer_y - 18}" x2="{content_width - padding}" y2="{footer_y - 18}" stroke="#21262d" stroke-width="1" />',
         f'  <g class="footer-anim" transform="translate({content_width / 2}, {footer_y})">',
-        f'    <text class="footer-tagline" y="6">{escape_xml(tagline)}</text>',
-        f'    <text class="footer-stack" y="26">{escape_xml(stack)}</text>',
+        f'    <text class="footer-tagline" y="8">{escape_xml(tagline)}</text>',
+        f'    <text class="footer-stack" y="30">{escape_xml(stack)}</text>',
         f'  </g>',
         f'</svg>'
     ])
