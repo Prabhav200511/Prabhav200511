@@ -1,24 +1,12 @@
 <div align="center">
 
-<!-- Hero Section -->
-<table>
-<tr>
-<td width="200" align="center">
-<img src="./assets/avatar.png" width="180" alt="Krishna Prabhav" />
-</td>
-<td>
+<img src="./assets/ascii.svg" width="860" alt="Krishna Prabhav — Animated ASCII Portrait" />
 
-### Krishna Prabhav
-
-**Software Engineer · Distributed Systems · AI Systems**
+### Software Engineer · Distributed Systems · AI Systems
 
 Building scalable distributed systems, backend infrastructure, and retrieval-augmented AI applications from first principles.
 
 `Go` `Python` `TypeScript` `PostgreSQL` `Redis` `Docker` `Kubernetes`
-
-</td>
-</tr>
-</table>
 
 </div>
 
