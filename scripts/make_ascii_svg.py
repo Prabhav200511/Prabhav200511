@@ -81,7 +81,7 @@ def remove_background_if_requested(img: Image.Image, use_rembg: bool = False) ->
     return img
 
 
-def preprocess_image(img: Image.Image, cols: int = 82, char_aspect: float = 0.55, enhance_contrast: float = 1.3, max_rows: int = 42) -> Image.Image:
+def preprocess_image(img: Image.Image, cols: int = 84, char_aspect: float = 0.55, enhance_contrast: float = 1.3, max_rows: int = 26) -> Image.Image:
     """Resizes and enhances the image for optimal ASCII representation."""
     # If image has transparency, composite onto black background first
     if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
@@ -200,8 +200,8 @@ def generate_animated_svg(
     title: str = "SWE & AI Systems Engineer",
     tagline: str = "Building scalable software one commit at a time • Distributed Systems • AI",
     stack: str = "Go • Python • TypeScript • Redis • PostgreSQL • PyTorch",
-    font_size: int = 11,
-    line_height: int = 13,
+    font_size: int = 10,
+    line_height: int = 11,
     padding: int = 30
 ):
     """Generates the full self-contained animated SVG with terminal boot sequence and typing effects."""
@@ -213,9 +213,9 @@ def generate_animated_svg(
     char_width = font_size * 0.602
     content_width = max(820, int(max_line_len * char_width) + padding * 2 + 40)
     
-    header_height = 170  # Window bar + Boot sequence + Name/Title
+    header_height = 150  # Window bar + Boot sequence + Name/Title
     portrait_height = num_rows * line_height
-    footer_height = 90   # Tagline + Stack + padding
+    footer_height = 70   # Tagline + Stack + padding
     total_height = header_height + portrait_height + footer_height
     
     # Animation timings
@@ -286,7 +286,7 @@ def generate_animated_svg(
         f'  </g>',
         f'  ',
         f'  <!-- Name & Title Banner -->',
-        f'  <g transform="translate({padding + 10}, 145)">',
+        f'  <g transform="translate({padding + 10}, 130)">',
         f'    <text class="name-text name-anim" y="0">{escape_xml(name)}</text>',
         f'    <text class="role-text role-anim" x="{len(name) * 13 + 20}" y="-2">// {escape_xml(title)}</text>',
         f'  </g>',
@@ -317,12 +317,12 @@ def generate_animated_svg(
     svg_parts.append('  </g>')
     
     # Footer Section (Tagline & Tech Stack)
-    footer_y = header_height + portrait_height + 40
+    footer_y = header_height + portrait_height + 30
     svg_parts.extend([
-        f'  <line x1="{padding}" y1="{footer_y - 18}" x2="{content_width - padding}" y2="{footer_y - 18}" stroke="#21262d" stroke-width="1" />',
+        f'  <line x1="{padding}" y1="{footer_y - 15}" x2="{content_width - padding}" y2="{footer_y - 15}" stroke="#21262d" stroke-width="1" />',
         f'  <g class="footer-anim" transform="translate({content_width / 2}, {footer_y})">',
-        f'    <text class="footer-tagline" y="8">{escape_xml(tagline)}</text>',
-        f'    <text class="footer-stack" y="32">{escape_xml(stack)}</text>',
+        f'    <text class="footer-tagline" y="6">{escape_xml(tagline)}</text>',
+        f'    <text class="footer-stack" y="26">{escape_xml(stack)}</text>',
         f'  </g>',
         f'</svg>'
     ])
@@ -339,8 +339,8 @@ def main():
     parser.add_argument("input", nargs="?", default="", help="Path to input photo (e.g. assets/photo.jpg)")
     parser.add_argument("output", nargs="?", default="assets/ascii.svg", help="Path to output SVG (default: assets/ascii.svg)")
     parser.add_argument("--demo", action="store_true", help="Generate demo avatar silhouette without an input photo")
-    parser.add_argument("--cols", type=int, default=82, help="Number of character columns (default: 82)")
-    parser.add_argument("--max-rows", type=int, default=42, help="Maximum portrait rows/height (default: 42)")
+    parser.add_argument("--cols", type=int, default=84, help="Number of character columns (default: 84)")
+    parser.add_argument("--max-rows", type=int, default=26, help="Maximum portrait rows/height (default: 26)")
     parser.add_argument("--charset", choices=list(ASCII_CHARSETS.keys()), default="detailed", help="Character density set to use")
     parser.add_argument("--remove-bg", action="store_true", help="Use rembg AI background removal before processing")
     parser.add_argument("--name", default="KRISHNA PRABHAV", help="Name to display on header")

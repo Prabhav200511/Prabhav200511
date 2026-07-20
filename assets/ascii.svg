@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 806" width="100%" height="100%" style="background: #0d1117; font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 506" width="100%" height="100%" style="background: #0d1117; font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace;">
   <defs>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap");
@@ -10,7 +10,7 @@
       .boot-success { fill: #3fb950; }
       .name-text { font-size: 22px; fill: #f0f6fc; font-weight: 700; letter-spacing: 2px; opacity: 0; }
       .role-text { font-size: 14px; fill: #a5d6ff; font-weight: 600; opacity: 0; }
-      .ascii-row { font-size: 11px; font-weight: 600; letter-spacing: 0px; white-space: pre; opacity: 0; }
+      .ascii-row { font-size: 10px; font-weight: 600; letter-spacing: 0px; white-space: pre; opacity: 0; }
       .footer-tagline { font-size: 13.5px; fill: #e2e8f0; font-weight: 600; text-anchor: middle; opacity: 0; }
       .footer-stack { font-size: 12.5px; fill: #7d8590; font-weight: 400; text-anchor: middle; opacity: 0; }
       .cursor { fill: #58a6ff; font-weight: 700; animation: blink 1s infinite; }
@@ -35,7 +35,7 @@
   </defs>
   
   <!-- Terminal Window Container -->
-  <rect class="bg-rect" x="4" y="4" width="812" height="798" />
+  <rect class="bg-rect" x="4" y="4" width="812" height="498" />
   <path class="header-bar" d="M 5 16 A 11 11 0 0 1 16 5 L 804 5 A 11 11 0 0 1 815 16 L 815 36 L 5 36 Z" />
   <line x1="5" y1="36" x2="815" y2="36" stroke="#30363d" stroke-width="1" />
   
@@ -54,60 +54,44 @@
   </g>
   
   <!-- Name & Title Banner -->
-  <g transform="translate(40, 145)">
+  <g transform="translate(40, 130)">
     <text class="name-text name-anim" y="0">KRISHNA PRABHAV</text>
     <text class="role-text role-anim" x="215" y="-2">// SWE &amp; AI Systems Engineer</text>
   </g>
   
   <!-- Animated ASCII Portrait Container -->
-  <g transform="translate(40, 170)">
-    <text class="ascii-row" x="0" y="13" style="animation: fadeIn 0.35s ease forwards 3.200s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$$$BWMdqa*ooW@$$$$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="26" style="animation: fadeIn 0.35s ease forwards 3.257s; fill: #64748b;">$$$$$$$$$$$$$$$$$$$Mkbwpwp#%8WokaB$$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="39" style="animation: fadeIn 0.35s ease forwards 3.314s; fill: #64748b;">$$$$$$$$$$$$$$$$$BkaM&amp;#abOZqdppbqp#$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="52" style="animation: fadeIn 0.35s ease forwards 3.371s; fill: #64748b;">$$$$$$$$$$$$$$$$$kWB&amp;&amp;aadZ0mOOqZwdwh$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="65" style="animation: fadeIn 0.35s ease forwards 3.429s; fill: #64748b;">$$$$$$$$$$$$$$$$%a$@8%MM&amp;hwqOX0pdphZ*$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="78" style="animation: fadeIn 0.35s ease forwards 3.486s; fill: #64748b;">$$$$$$$$$$$$$$$$%h@$@$$$@BWmQQvYLwoaw$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="91" style="animation: fadeIn 0.35s ease forwards 3.543s; fill: #64748b;">$$$$$$$$$$$$$$$$$h$$$$$$$$8%%aQYXJLkO8$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="104" style="animation: fadeIn 0.35s ease forwards 3.600s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$mO#$$#ZpkCbdQ()ux\x0%$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="117" style="animation: fadeIn 0.35s ease forwards 3.657s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$Y(upMJxzQLcnri^,()rW$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="130" style="animation: fadeIn 0.35s ease forwards 3.714s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$*jfcUYcn|[?!|Y,,i:k$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="143" style="animation: fadeIn 0.35s ease forwards 3.771s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$#crYUYf_'&#160;&#160;&lt;]&#160;&#160;&#160;&#160;a$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="156" style="animation: fadeIn 0.35s ease forwards 3.829s; fill: #cbd5e1;">$$$$$$$$$$$$$$$$$$$$YzYYY\&gt;i]j}I''u$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="169" style="animation: fadeIn 0.35s ease forwards 3.886s; fill: #94a3b8;">$$$$$$$$$$$$$$$$$$@McYCCU/)n)-+l`u$$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="182" style="animation: fadeIn 0.35s ease forwards 3.943s; fill: #cbd5e1;">$$$$$$$$$$$$$$$@&amp;bpduzCZmU)\(I.&#160;[$$$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="195" style="animation: fadeIn 0.35s ease forwards 4.000s; fill: #94a3b8;">$$$$$$$$$$BWapwOQ0#qvnjXYXc{&gt;!&quot;;]ro$$$$$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="208" style="animation: fadeIn 0.35s ease forwards 4.057s; fill: #e2e8f0;">$$$$$$@#dmOQ0mpbkbkp0x}/{iI!-)]{{~1xCbW$$$$$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="221" style="animation: fadeIn 0.35s ease forwards 4.114s; fill: #94a3b8;">$$$$$*0QOqbhhkkhhkkkqz1)(()||1)){(t/||(\cp@$$$$$$$$</text>
-    <text class="ascii-row" x="0" y="234" style="animation: fadeIn 0.35s ease forwards 4.171s; fill: #cbd5e1;">$$$$#UZZZwwZmpbbbhkpZCCYvxf\(((()\jncvj)?-)Q@$$$$$$</text>
-    <text class="ascii-row" x="0" y="247" style="animation: fadeIn 0.35s ease forwards 4.229s; fill: #94a3b8;">$$$BmpXxYpLuY0ZZ0Zm0LCCYcnffff\(\fxuzzvxf(-&gt;[o$$$$$</text>
-    <text class="ascii-row" x="0" y="260" style="animation: fadeIn 0.35s ease forwards 4.286s; fill: #cbd5e1;">$$$*bhvfd#0zLLJLJUJYczzXzunnnj//fjfrz0Ou){1?i-&amp;$$$$</text>
-    <text class="ascii-row" x="0" y="273" style="animation: fadeIn 0.35s ease forwards 4.343s; fill: #94a3b8;">$$$ao*YY&amp;oOCQUcXUXXunvzYYuxvurjff/|f0oL}/z)_}iJ$$$$</text>
-    <text class="ascii-row" x="0" y="286" style="animation: fadeIn 0.35s ease forwards 4.400s; fill: #f8fafc;">$$$ho8bh8kmmLYcczzvrjzCCzczYvnrf/|(xhhf)aU[~}?\$$$$</text>
-    <text class="ascii-row" x="0" y="299" style="animation: fadeIn 0.35s ease forwards 4.457s; fill: #94a3b8;">$$$ph@MM%bbqLXcXzcxfxCOLUYUUcvrt\(1uoZ]O&amp;n~})(_w$$$</text>
-    <text class="ascii-row" x="0" y="312" style="animation: fadeIn 0.35s ease forwards 4.514s; fill: #cbd5e1;">$$*hoWB8%hadQUzczcnjuZwOCUUUznj/|1{vkc}%q[_t)|{?#$$</text>
-    <text class="ascii-row" x="0" y="325" style="animation: fadeIn 0.35s ease forwards 4.571s; fill: #94a3b8;">$@bW&amp;&amp;8$@*#aqQCUzcvxLppwQCUJXx/\)1|UL(vBr-vufjt)|&amp;$</text>
-    <text class="ascii-row" x="0" y="338" style="animation: fadeIn 0.35s ease forwards 4.629s; fill: #cbd5e1;">$$qMB$$$$&amp;&amp;&amp;MbdOCUXYqobpmO0Lcu/(){jUu}bd|C0Qvntx\x@</text>
-    <text class="ascii-row" x="0" y="351" style="animation: fadeIn 0.35s ease forwards 4.686s; fill: #94a3b8;">$Wo$@$$$$8&amp;&amp;WM*dZUOZaMakbkp0Uux/(\cY/fanQqYnt)[fn\8</text>
-    <text class="ascii-row" x="0" y="364" style="animation: fadeIn 0.35s ease forwards 4.743s; fill: #334155;">$h8$$$$$$@WM#MbLCYJQaMo##pZZLXzrfxXY\Cxp&amp;LUnxx}{\p$</text>
-    <text class="ascii-row" x="0" y="377" style="animation: fadeIn 0.35s ease forwards 4.800s; fill: #94a3b8;">$oo$$$$$$$&amp;&amp;&amp;MhOJO0q*WM&amp;*wLCUYcnuzUvXh#&amp;0ccvzn/j/@$</text>
-    <text class="ascii-row" x="0" y="390" style="animation: fadeIn 0.35s ease forwards 4.857s; fill: #cbd5e1;">$$b$$$$$$$&amp;WW#kZwZd&amp;8&amp;8MhmUzXnfnuvxj&amp;$%OLOCCQCJUxB$</text>
-    <text class="ascii-row" x="0" y="403" style="animation: fadeIn 0.35s ease forwards 4.914s; fill: #94a3b8;">$&amp;o$$$$$$$B8&amp;oqOmq#8&amp;%8Mh0YzcnxYYJvo$@&amp;88WhdqOUrz@$</text>
-    <text class="ascii-row" x="0" y="416" style="animation: fadeIn 0.35s ease forwards 4.971s; fill: #cbd5e1;">BM$$$$$$$$B%@&amp;#okMBBBB&amp;awQYcvxunvnJ$$$B&amp;#ohpmOJXxa$</text>
-    <text class="ascii-row" x="0" y="429" style="animation: fadeIn 0.35s ease forwards 5.029s; fill: #94a3b8;">@hqwdo&amp;@$$8@$BM#B$$$$$B#hqUzuvzXcnh$$$@$WabwZLXUY8$</text>
-    <text class="ascii-row" x="0" y="442" style="animation: fadeIn 0.35s ease forwards 5.086s; fill: #475569;">$0nczLd&amp;*oB$B&amp;8@$$$$$@8*qZ0QL000LCd$$$8a%#abwZUxc%$</text>
-    <text class="ascii-row" x="0" y="455" style="animation: fadeIn 0.35s ease forwards 5.143s; fill: #94a3b8;">$LczYQh&amp;m*$@@B$$$$$$$BopOQLL00LCCJQ8$$#Z$@Whw0JJO&amp;$</text>
-    <text class="ascii-row" x="0" y="468" style="animation: fadeIn 0.35s ease forwards 5.200s; fill: #cbd5e1;">@YucYmM#d@@$$$$$$$$$@#pZ0L0OO0QLCUJ#$$Wa$8apOUfL$$$</text>
-    <text class="ascii-row" x="0" y="481" style="animation: fadeIn 0.35s ease forwards 5.257s; fill: #64748b;">BXuvCb8ko$$$$$$$$$$BMpOQQ00QOO0QJJw%$$$BWdZLCUna$$$</text>
-    <text class="ascii-row" x="0" y="494" style="animation: fadeIn 0.35s ease forwards 5.314s; fill: #64748b;">%zuc0a&amp;L8$$$$$$$$$@#qOQQQ0QQQLCLLQ*$$$%*hpqZCrm$$$$</text>
-    <text class="ascii-row" x="0" y="507" style="animation: fadeIn 0.35s ease forwards 5.371s; fill: #64748b;">%zvXmWdq$$$$$$$$$@Md0Q0OOO0Q0Q0mmZZ%$80j~&quot;&lt;tzQ$$$$$</text>
-    <text class="ascii-row" x="0" y="520" style="animation: fadeIn 0.35s ease forwards 5.429s; fill: #64748b;">%XuYd%h%$$$$$$$@$8aqOOOZOOOOOO00LCUh$qu~'&#160;&#160;&#160;L$$$$$$</text>
-    <text class="ascii-row" x="0" y="533" style="animation: fadeIn 0.35s ease forwards 5.486s; fill: #64748b;">8XcQ#B%@$$$$$$$$B#hppwwpddppqqqZO008*c+.&#160;..z$$$$$$$</text>
-    <text class="ascii-row" x="0" y="546" style="animation: fadeIn 0.35s ease forwards 5.543s; fill: #64748b;">8XXd%B$$$$$$$$$@&amp;adqqqqqqqwqqqwwwmd8U?'&#160;.&#160;j$@$$$$$$</text>
-    <text class="ascii-row cursor" x="349" y="546" style="animation: fadeIn 0.1s forwards 6.00s, blink 1s infinite 6.00s;">█</text>
+  <g transform="translate(40, 150)">
+    <text class="ascii-row" x="0" y="11" style="animation: fadeIn 0.35s ease forwards 3.200s; fill: #64748b;">$$$$$$$$$$$$$$8#aqa%&amp;&amp;%$$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="22" style="animation: fadeIn 0.35s ease forwards 3.292s; fill: #64748b;">$$$$$$$$$$$$@M*adZOdbppk%$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="33" style="animation: fadeIn 0.35s ease forwards 3.385s; fill: #64748b;">$$$$$$$$$$$$&amp;8&amp;#kqC0U0ZmwW$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="44" style="animation: fadeIn 0.35s ease forwards 3.477s; fill: #64748b;">$$$$$$$$$$$@8$BB%8oOYvCOkb@$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="55" style="animation: fadeIn 0.35s ease forwards 3.569s; fill: #94a3b8;">$$$$$$$$$$$$%$$$$$WM*UnzJOM$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="66" style="animation: fadeIn 0.35s ease forwards 3.662s; fill: #cbd5e1;">$$$$$$$$$$$$YU%*cQLCJ-&gt;1}YB$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="77" style="animation: fadeIn 0.35s ease forwards 3.754s; fill: #94a3b8;">$$$$$$$$$$$$L[vYj\{++(',+%$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="88" style="animation: fadeIn 0.35s ease forwards 3.846s; fill: #cbd5e1;">$$$$$$$$$$$$$bxvc1`&#160;I-'&#160;&lt;$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="99" style="animation: fadeIn 0.35s ease forwards 3.938s; fill: #94a3b8;">$$$$$$$$$$$$$$CuXn+}[-&quot;lo$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="110" style="animation: fadeIn 0.35s ease forwards 4.031s; fill: #cbd5e1;">$$$$$$$$$$@8*kxuLL/)&lt;..d$$$$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="121" style="animation: fadeIn 0.35s ease forwards 4.123s; fill: #94a3b8;">$$$$$@&amp;okdqmqqu1/|[&gt;&gt;I!?CM@$$$$$$$$$</text>
+    <text class="ascii-row" x="0" y="132" style="animation: fadeIn 0.35s ease forwards 4.215s; fill: #cbd5e1;">$$$%dmZwqqdbdd01?-&lt;-]??~?)fuCo$$$$$$</text>
+    <text class="ascii-row" x="0" y="143" style="animation: fadeIn 0.35s ease forwards 4.308s; fill: #94a3b8;">$$@ZYUOLLmqqdwLYvj\1}[?}/jf1_+\b$$$$</text>
+    <text class="ascii-row" x="0" y="154" style="animation: fadeIn 0.35s ease forwards 4.400s; fill: #cbd5e1;">$$Ww/cbuvJJYUYvvvx/\\1{(\jXY|-i&quot;L$$$</text>
+    <text class="ascii-row" x="0" y="165" style="animation: fadeIn 0.35s ease forwards 4.492s; fill: #94a3b8;">$$MhnbaUJcncurtxcntrt||)}jkv?r_l&lt;%$$</text>
+    <text class="ascii-row" x="0" y="176" style="animation: fadeIn 0.35s ease forwards 4.585s; fill: #e2e8f0;">$$o&amp;h&amp;dZJnxnx\tYYuuvr/)}?Uh]OUI+&gt;Q$@</text>
+    <text class="ascii-row" x="0" y="187" style="animation: fadeIn 0.35s ease forwards 4.677s; fill: #94a3b8;">$%hM8&amp;kdCuxnj|xOLzccx\1]-LY(&amp;[&gt;}]+#$</text>
+    <text class="ascii-row" x="0" y="198" style="animation: fadeIn 0.35s ease forwards 4.769s; fill: #cbd5e1;">$#M8B$#odLYunfCpOUzzr)[-{U{QQ-vf/}\&amp;</text>
+    <text class="ascii-row" x="0" y="209" style="animation: fadeIn 0.35s ease forwards 4.862s; fill: #94a3b8;">$8B$$$&amp;&amp;MapCXJkaqwmUx\}?fx{wrQYj{1)c</text>
+    <text class="ascii-row" x="0" y="220" style="animation: fadeIn 0.35s ease forwards 4.954s; fill: #cbd5e1;">BB$$$$B#**0XzCh*ohOQzn\\cfxYhLx/)&lt;/#</text>
+    <text class="ascii-row" x="0" y="231" style="animation: fadeIn 0.35s ease forwards 5.046s; fill: #94a3b8;">@%$$$$$MW*ZJLq#MWbUcvffxxn*W0vuvntc$</text>
+    <text class="ascii-row" x="0" y="242" style="animation: fadeIn 0.35s ease forwards 5.138s; fill: #f8fafc;">$@$$$$$&amp;Wk00q&amp;&amp;8#wznr/uvjo$MhawZLxJ$</text>
+    <text class="ascii-row" x="0" y="253" style="animation: fadeIn 0.35s ease forwards 5.231s; fill: #94a3b8;">BBB$$$$8@Whh8BB%aZzxfjrtQ$@B&amp;apOCuzB</text>
+    <text class="ascii-row" x="0" y="264" style="animation: fadeIn 0.35s ease forwards 5.323s; fill: #64748b;">oczQo8&amp;B@&amp;&amp;$$$$@*qCzcYYud$$@%apZCxY@</text>
+    <text class="ascii-row" x="0" y="275" style="animation: fadeIn 0.35s ease forwards 5.415s; fill: #64748b;">wjnUa*&amp;@@%$$$$$MqCUCLCYXCB$B@@*wJcw@</text>
+    <text class="ascii-row" x="0" y="286" style="animation: fadeIn 0.35s ease forwards 5.508s; fill: #64748b;">0fuZM&amp;B$$$$$$$&amp;qLJJCLJYzJ%$BB#wLnc$$</text>
+    <text class="ascii-row cursor" x="228" y="286" style="animation: fadeIn 0.1s forwards 6.00s, blink 1s infinite 6.00s;">█</text>
   </g>
-  <line x1="30" y1="738" x2="790" y2="738" stroke="#21262d" stroke-width="1" />
-  <g class="footer-anim" transform="translate(410.0, 756)">
-    <text class="footer-tagline" y="8">Building scalable software • Distributed Systems • AI</text>
-    <text class="footer-stack" y="32">Go • Python • TypeScript • Redis • PostgreSQL • PyTorch • ONNX</text>
+  <line x1="30" y1="451" x2="790" y2="451" stroke="#21262d" stroke-width="1" />
+  <g class="footer-anim" transform="translate(410.0, 466)">
+    <text class="footer-tagline" y="6">Building scalable software • Distributed Systems • AI</text>
+    <text class="footer-stack" y="26">Go • Python • TypeScript • Redis • PostgreSQL • PyTorch • ONNX</text>
   </g>
 </svg>
